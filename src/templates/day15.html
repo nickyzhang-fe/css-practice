@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            width: 100vw;
+            height: 100vh;
+            padding: 50px;
+            background: bisque;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        body{
+            overflow: scroll;
+            position: absolute;
+            box-sizing: border-box;
+            width: calc(100vw - 100px);
+            height: calc(100vh - 100px);
+        }
+
+        .child {
+            height: 1000px;
+            width: auto;
+        }
+
+        .child1 {
+            margin: 50px;
+            border: 10px solid cadetblue;
+            background: #75b86b;
+            padding: 40px 40px;
+            box-sizing: border-box;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+<div id="child1" class="child1 child">
+    父元素高度为calc(100vh - 100px)<br>
+    子元素高度1000px<br>
+    子元素border为10px，颜色为cadetblue，<br>
+    子元素margin为50px，padding：40px<br>
+    <span>父元素：offsetHeight为可视区域的总高度（ content + padding + border）；</span>
+    <br>
+    <br>
+    <span>子元素：offsetHeight=1000px; offsetHeight=子元素的（ content + padding + border）；</span>
+    <br>
+    <br>
+    <span>子元素clientHeight的高度为980px; clientHeight = content + padding；（不包括border的高度）</span>
+    <br>
+    <br>
+    <span>子元素offsetTop的值为50px; offsetTop = 子元素border到父元素顶部的距离；offsetLeft同理</span>
+    <br>
+    <br>
+    <span>scrollHeight的值为980px; scrollTop = 子元素内容的高度（padding+content）</span>
+    <br>
+    <br>
+    <span>scrollTop的值为0; scrollTop = 滚动距离；可读可写</span>
+    <br>
+    <br>
+    <span>子元素.getBoundingClientRect().top的初始值为100px，随滚动而变; getBoundingClientRect = 子元素border顶部到窗口(不一定是父元素)顶部的距离；</span><br>
+</div>
+</body>
+
+</html>
+<script>
+    function init() {
+        var child1 = document.getElementById('child1')
+        console.log('window', child1.scrollHeight)
+    }
+    setTimeout(function () {
+        init()
+    }, 100)
+    document.body.addEventListener("onscroll", function(event) {
+        console.log('scroll')
+    });
+    window.onscroll = function () {
+        console.log('onscroll')
+        var child1 = document.getElementById('child1')
+    }
+</script>
