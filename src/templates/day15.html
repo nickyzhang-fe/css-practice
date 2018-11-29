@@ -56,7 +56,8 @@
 
     </style>
 </head>
-<body>
+
+<body id="body" onscroll="scroll()">
 <div id="child1" class="child1 child">
     父元素高度为calc(100vh - 100px)<br>
     子元素高度1000px<br>
@@ -74,7 +75,7 @@
     <span>子元素offsetTop的值为50px; offsetTop = 子元素border到父元素顶部的距离；offsetLeft同理</span>
     <br>
     <br>
-    <span>scrollHeight的值为980px; scrollTop = 子元素内容的高度（padding+content）</span>
+    <span>scrollHeight的值为980px; scrollHeight = 子元素可见滚动内容的高度（padding+content）</span>
     <br>
     <br>
     <span>scrollTop的值为0; scrollTop = 滚动距离；可读可写</span>
@@ -83,21 +84,24 @@
     <span>子元素.getBoundingClientRect().top的初始值为100px，随滚动而变; getBoundingClientRect = 子元素border顶部到窗口(不一定是父元素)顶部的距离；</span><br>
 </div>
 </body>
-
 </html>
 <script>
     function init() {
         var child1 = document.getElementById('child1')
-        console.log('window', child1.scrollHeight)
+        console.log('child1', child1.scrollTop)
     }
     setTimeout(function () {
         init()
     }, 100)
-    document.body.addEventListener("onscroll", function(event) {
-        console.log('scroll')
-    });
-    window.onscroll = function () {
+
+    function scroll() {
         console.log('onscroll')
         var child1 = document.getElementById('child1')
+    }
+
+    function clickBtn() {
+        var child1 = document.getElementById('child1')
+        child1.scrollTop = child1.scrollTop + 50
+        console.log(child1.scrollTop)
     }
 </script>
