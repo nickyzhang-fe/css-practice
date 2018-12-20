@@ -71,9 +71,17 @@
     },false);
     box3.addEventListener('click', function(event){
         console.log('冒泡box3');
+        console.log(box3.tagName)
         event.preventDefault();//阻止默认操作
         event.stopPropagation()//阻止事件冒泡
         event.cancelBubble = true; //IE冒泡拦截
+        for (var i = 0; i < 5; i++) {
+            (function (i) {
+                setTimeout(function () {
+                    console.log(i);
+                })
+            })(i)
+        }
     },false);
     box3.addEventListener('click', function(){
         console.log('捕获box3');
