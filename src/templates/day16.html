@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            width: 100vw;
+            height: 100vh;
+            padding: 50px;
+            background: bisque;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        body{
+            overflow: scroll;
+            position: absolute;
+            box-sizing: border-box;
+            width: calc(100vw - 100px);
+            height: calc(100vh - 100px);
+        }
+
+        #box1{
+            height: 500px;
+            width: 500px;
+            background: red;
+        }
+        #box2{
+            height: 300px;
+            width: 300px;
+            background: black;
+        }
+        #box3{
+            height: 100px;
+            width: 100px;
+            background: white;
+        }
+    </style>
+</head>
+
+<body id="body" onscroll="scroll()">
+<div id="box1">
+    <div id="box2">
+        <div id="box3"></div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var box1 = document.getElementById('box1')
+    var box2 = document.getElementById('box2')
+    var box3 = document.getElementById('box3')
+    box1.addEventListener('click', function(){
+        console.log('捕获box1');
+    },true);
+    box2.addEventListener('click', function(){
+        console.log('捕获box2');
+    },true);
+    box1.addEventListener('click', function(){
+        console.log('冒泡box1');
+    },false);
+    box3.addEventListener('click', function(event){
+        console.log('冒泡box3');
+        event.preventDefault();//阻止默认操作
+        event.stopPropagation()//阻止事件冒泡
+        event.cancelBubble = true; //IE冒泡拦截
+    },false);
+    box3.addEventListener('click', function(){
+        console.log('捕获box3');
+    },true);
+
+    box2.addEventListener('click', function(){
+        console.log('冒泡box2');
+
+    },false);
+
+</script>
