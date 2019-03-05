@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .box {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            background: #ff8605;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+        }
+        .box::before {
+            position: absolute;
+            bottom: -5px;
+            left: 45px;
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #ff8605;
+            transform: rotate(135deg);
+            box-shadow: 1px -2px 5px rgba(0, 0, 0, .2);
+        }
+        .box::after {
+            position: absolute;
+            bottom: 0;
+            left: 40px;
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: #ff8605;
+        }
+    </style>
+</head>
+<body>
+<header>
+
+</header>
+<div class="box"></div>
+</body>
+</html>
