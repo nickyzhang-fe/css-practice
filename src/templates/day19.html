@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .flex_practice {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+            display: flex;
+            margin: 50px auto;
+        }
+
+        .flex_left {
+            height: 100%;
+            width: 100px;
+            background: black;
+        }
+
+        .flex_center {
+            height: 100%;
+            width: 200px;
+            background: red;
+            flex: 1;
+        }
+
+        .flex_right {
+            height: 100%;
+            /*效果等同于width,若同时存在则会覆盖*/
+            flex-basis: 100px;
+            /*width: 200px;*/
+            background: orange;
+        }
+        .float_practice{
+            position: relative;
+            width: 600px;
+            height: 400px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+            margin: 50px auto;
+        }
+        .float_left{
+            width: 100px;
+            height: 100%;
+            float: left;
+            background: black;
+        }
+        .float_right{
+            width: 200px;
+            height: 100%;
+            float: right;
+            background: orange;
+        }
+        .float_center{
+            width: auto;
+            height: 100%;
+            background: red;
+            margin: 0 200px 0 100px;
+        }
+    </style>
+</head>
+<body>
+<header>
+
+</header>
+<div class="flex_practice">
+    <div class="flex_left"></div>
+    <div class="flex_center"></div>
+    <div class="flex_right"></div>
+</div>
+<div class="float_practice">
+    <div class="float_left"></div>
+    <div class="float_right"></div>
+    <div class="float_center"></div>
+</div>
+</body>
+</html>
