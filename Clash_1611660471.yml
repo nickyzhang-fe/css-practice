@@ -1,0 +1,960 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: '0.0.0.0:9090'
+secret: ''
+dns:
+  enable: true
+  ipv6: false
+  listen: '0.0.0.0:5353'
+  enhanced-mode: redir-host
+  nameserver:
+    - '119.29.29.29'
+    - 'https://223.5.5.5/dns-query'
+    - 'https://doh.pub/dns-query'
+    - 'https://cloudflare-dns.com/dns-query'
+proxies:
+  - {"name":"专线 新加坡 A1 [3.5x | GD-AZ]","type":"ssr","server":"iplc01.kbttfmyxjwc4ng5a.node.cyou","port":8120,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"专线 香港 A1 [3x | GD-AZ]","type":"ssr","server":"iplc01.kbttfmyxjwc4ng5a.node.cyou","port":8160,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 冷门-俄罗斯 A1 [1.2x | SH-RU]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8194,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 冷门-德国 A1 [1.2x | SH-DE]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8193,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 台湾 A1 [1x | SH-Hinet]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8141,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 台湾 A2 [1x | GD-Hinet]","type":"ssr","server":"cy-a1.dnd4yafekm44ha3c.route.node.surf","port":8141,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 新加坡 A1 [1x | SH-Linode]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8121,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 新加坡 A2 [1x | SH-Linode]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8122,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 新加坡 A3 [1x | SH-AWS]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8123,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 新加坡 A4 [1x | SH-Linode]","type":"ssr","server":"cy-a1.dnd4yafekm44ha3c.route.node.surf","port":8121,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 新加坡 A5 [1.2x | SH-Linode]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8122,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 新加坡 A6 [1.2x | JS-AWS]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8123,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 新加坡 A7 [1.2x | GD-Linode]","type":"ssr","server":"cy-a1.dnd4yafekm44ha3c.route.node.surf","port":8121,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 新加坡 A8 [1.2x | GD-Linode]","type":"ssr","server":"cy-a1.dnd4yafekm44ha3c.route.node.surf","port":8122,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 新加坡 A9 [1.2x | GD-AWS]","type":"ssr","server":"cy-a1.dnd4yafekm44ha3c.route.node.surf","port":8123,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 日本 A1 [1x | SH-AZ]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8111,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 日本 A2 [1x | SH-NTT]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8111,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 日本 A3 [1x | SH-AZ]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8111,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 日本 A4 [1x | SH-NTT]","type":"ssr","server":"cy-a1.dnd4yafekm44ha3c.route.node.surf","port":8112,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 日本 A5 [1x | GD-AZ]","type":"ssr","server":"cy-a1.dnd4yafekm44ha3c.route.node.surf","port":8112,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 日本 A6 [1x | JS-NTT]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8112,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 美国 A1 [1x | SH-NTT]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8131,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 美国 A2 [1x | SH-Linode]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8132,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 美国 A3 [1x | SH-NTT]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8131,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 美国 A4 [1x | SH-Linode]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8132,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 韩国 A1 [1x | SH-AWS]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8151,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 韩国 A2 [1x | SH-AWS]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8151,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 韩国 A3 [1x | JS-AWS]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8151,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 香港 A1 [1x | SH-AZ]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8161,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 香港 A2 [1x | SH-AZ]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8162,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 香港 A3 [1x | SH-HGC]","type":"ssr","server":"cy-a1.dnd4yafekm44ha3c.route.node.surf","port":8163,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 香港 A4 [1x | SH-AZ]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8161,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 香港 A5 [1x | SH-AZ]","type":"ssr","server":"cy-a2.2xtafnwzk8hrz7hr.route.node.surf","port":8162,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 香港 A6 [1x | GD-HGC]","type":"ssr","server":"cy-a1.dnd4yafekm44ha3c.route.node.surf","port":8163,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 香港 A7 [1x | GD-AZ]","type":"ssr","server":"cy-a1.dnd4yafekm44ha3c.route.node.surf","port":8161,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 香港 A8 [1x | GD-AZ]","type":"ssr","server":"cy-a1.dnd4yafekm44ha3c.route.node.surf","port":8162,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 香港 A9 [1x | GD-HGC]","type":"ssr","server":"cy-a1.dnd4yafekm44ha3c.route.node.surf","port":8163,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 马来西亚 A1 [1x | SH-PCCW]","type":"ssr","server":"cy-a1.dnd4yafekm44ha3c.route.node.surf","port":8124,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 马来西亚 A2 [1x | GD-PCCW]","type":"ssr","server":"cy-a1.dnd4yafekm44ha3c.route.node.surf","port":8124,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"中继 马来西亚 A3 [1x | GD-PCCW]","type":"ssr","server":"cy-a1.dnd4yafekm44ha3c.route.node.surf","port":8124,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  - {"name":"回国 上海 A1 [2x | SH]","type":"ssr","server":"tocn-sh01.brh8mzi6wscay8xd.route.node.surf","port":557,"cipher":"aes-256-cfb","password":"LjtFzy","protocol":"auth_aes128_md5","protocol-param":"35263:sOIDu2","obfs":"http_simple","obfs-param":"a0f6f35263.microsoft.com","udp":true}
+  -
+    name: '回国用户 请访问 用户中心'
+    type: socks5
+    server: 127.0.0.1
+    port: 10086
+  -
+    name: '使用 “回国专用订阅”'
+    type: socks5
+    server: 127.0.0.1
+    port: 10086
+
+proxy-groups:
+-
+  name: CYLINK
+  type: select
+  proxies:
+    - Auto
+    - '专线 新加坡 A1 [3.5x | GD-AZ]'
+    - '专线 香港 A1 [3x | GD-AZ]'
+    - '中继 冷门-俄罗斯 A1 [1.2x | SH-RU]'
+    - '中继 冷门-德国 A1 [1.2x | SH-DE]'
+    - '中继 台湾 A1 [1x | SH-Hinet]'
+    - '中继 台湾 A2 [1x | GD-Hinet]'
+    - '中继 新加坡 A1 [1x | SH-Linode]'
+    - '中继 新加坡 A2 [1x | SH-Linode]'
+    - '中继 新加坡 A3 [1x | SH-AWS]'
+    - '中继 新加坡 A4 [1x | SH-Linode]'
+    - '中继 新加坡 A5 [1.2x | SH-Linode]'
+    - '中继 新加坡 A6 [1.2x | JS-AWS]'
+    - '中继 新加坡 A7 [1.2x | GD-Linode]'
+    - '中继 新加坡 A8 [1.2x | GD-Linode]'
+    - '中继 新加坡 A9 [1.2x | GD-AWS]'
+    - '中继 日本 A1 [1x | SH-AZ]'
+    - '中继 日本 A2 [1x | SH-NTT]'
+    - '中继 日本 A3 [1x | SH-AZ]'
+    - '中继 日本 A4 [1x | SH-NTT]'
+    - '中继 日本 A5 [1x | GD-AZ]'
+    - '中继 日本 A6 [1x | JS-NTT]'
+    - '中继 美国 A1 [1x | SH-NTT]'
+    - '中继 美国 A2 [1x | SH-Linode]'
+    - '中继 美国 A3 [1x | SH-NTT]'
+    - '中继 美国 A4 [1x | SH-Linode]'
+    - '中继 韩国 A1 [1x | SH-AWS]'
+    - '中继 韩国 A2 [1x | SH-AWS]'
+    - '中继 韩国 A3 [1x | JS-AWS]'
+    - '中继 香港 A1 [1x | SH-AZ]'
+    - '中继 香港 A2 [1x | SH-AZ]'
+    - '中继 香港 A3 [1x | SH-HGC]'
+    - '中继 香港 A4 [1x | SH-AZ]'
+    - '中继 香港 A5 [1x | SH-AZ]'
+    - '中继 香港 A6 [1x | GD-HGC]'
+    - '中继 香港 A7 [1x | GD-AZ]'
+    - '中继 香港 A8 [1x | GD-AZ]'
+    - '中继 香港 A9 [1x | GD-HGC]'
+    - '中继 马来西亚 A1 [1x | SH-PCCW]'
+    - '中继 马来西亚 A2 [1x | GD-PCCW]'
+    - '中继 马来西亚 A3 [1x | GD-PCCW]'
+-
+  name: Domestic
+  type: select
+  proxies:
+    - DIRECT
+    - CYLINK
+    - '回国用户 请访问 用户中心'
+    - '使用 “回国专用订阅”'
+-
+  name: Others
+  type: select
+  proxies:
+    - CYLINK
+    - Domestic
+-
+  name: Auto
+  type: url-test
+  proxies:
+    - '中继 冷门-俄罗斯 A1 [1.2x | SH-RU]'
+    - '中继 冷门-德国 A1 [1.2x | SH-DE]'
+    - '中继 台湾 A1 [1x | SH-Hinet]'
+    - '中继 台湾 A2 [1x | GD-Hinet]'
+    - '中继 新加坡 A1 [1x | SH-Linode]'
+    - '中继 新加坡 A2 [1x | SH-Linode]'
+    - '中继 新加坡 A3 [1x | SH-AWS]'
+    - '中继 新加坡 A4 [1x | SH-Linode]'
+    - '中继 新加坡 A5 [1.2x | SH-Linode]'
+    - '中继 新加坡 A6 [1.2x | JS-AWS]'
+    - '中继 新加坡 A7 [1.2x | GD-Linode]'
+    - '中继 新加坡 A8 [1.2x | GD-Linode]'
+    - '中继 新加坡 A9 [1.2x | GD-AWS]'
+    - '中继 日本 A1 [1x | SH-AZ]'
+    - '中继 日本 A2 [1x | SH-NTT]'
+    - '中继 日本 A3 [1x | SH-AZ]'
+    - '中继 日本 A4 [1x | SH-NTT]'
+    - '中继 日本 A5 [1x | GD-AZ]'
+    - '中继 日本 A6 [1x | JS-NTT]'
+    - '中继 美国 A1 [1x | SH-NTT]'
+    - '中继 美国 A2 [1x | SH-Linode]'
+    - '中继 美国 A3 [1x | SH-NTT]'
+    - '中继 美国 A4 [1x | SH-Linode]'
+    - '中继 韩国 A1 [1x | SH-AWS]'
+    - '中继 韩国 A2 [1x | SH-AWS]'
+    - '中继 韩国 A3 [1x | JS-AWS]'
+    - '中继 香港 A1 [1x | SH-AZ]'
+    - '中继 香港 A2 [1x | SH-AZ]'
+    - '中继 香港 A3 [1x | SH-HGC]'
+    - '中继 香港 A4 [1x | SH-AZ]'
+    - '中继 香港 A5 [1x | SH-AZ]'
+    - '中继 香港 A6 [1x | GD-HGC]'
+    - '中继 香港 A7 [1x | GD-AZ]'
+    - '中继 香港 A8 [1x | GD-AZ]'
+    - '中继 香港 A9 [1x | GD-HGC]'
+    - '中继 马来西亚 A1 [1x | SH-PCCW]'
+    - '中继 马来西亚 A2 [1x | GD-PCCW]'
+    - '中继 马来西亚 A3 [1x | GD-PCCW]'
+  url: 'http://www.gstatic.com/generate_204'
+  interval: '28800'
+
+# 规则
+rules:
+- DOMAIN-SUFFIX,example1.kache.moe,DIRECT
+- DOMAIN-SUFFIX,example2.kache.moe,DIRECT
+- DOMAIN-SUFFIX,example3.kache.moe,DIRECT
+- DOMAIN-SUFFIX,example4.kache.moe,DIRECT
+- DOMAIN-SUFFIX,example5.kache.moe,DIRECT
+- DOMAIN-SUFFIX,stc-clubs.fun,DIRECT
+- DOMAIN-SUFFIX,cylink.moe,DIRECT
+- DOMAIN-SUFFIX,nnn3ro.link,DIRECT
+- DOMAIN-SUFFIX,kcssr.best,DIRECT
+- DOMAIN-SUFFIX,crisp.chat,DIRECT
+
+# (Global_TV)
+# > ABC
+- DOMAIN-SUFFIX,edgedatg.com,CYLINK
+- DOMAIN-SUFFIX,go.com,CYLINK
+
+# > AbemaTV
+- DOMAIN,linear-abematv.akamaized.net,CYLINK
+- DOMAIN-SUFFIX,abema.io,CYLINK
+- DOMAIN-SUFFIX,abema.tv,CYLINK
+- DOMAIN-SUFFIX,akamaized.net,CYLINK
+- DOMAIN-SUFFIX,ameba.jp,CYLINK
+- DOMAIN-SUFFIX,hayabusa.io,CYLINK
+
+# > Amazon Prime Video
+- DOMAIN-SUFFIX,aiv-cdn.net,CYLINK
+- DOMAIN-SUFFIX,amazonaws.com,CYLINK
+- DOMAIN-SUFFIX,amazonvideo.com,CYLINK
+- DOMAIN-SUFFIX,llnwd.net,CYLINK
+
+# > Bahamut
+- DOMAIN-SUFFIX,bahamut.com.tw,CYLINK
+- DOMAIN-SUFFIX,gamer.com.tw,CYLINK
+- DOMAIN-SUFFIX,hinet.net,CYLINK
+
+# > BBC
+- DOMAIN-KEYWORD,bbcfmt,CYLINK
+- DOMAIN-KEYWORD,co.uk,CYLINK
+- DOMAIN-KEYWORD,uk-live,CYLINK
+- DOMAIN-SUFFIX,bbc.co,CYLINK
+- DOMAIN-SUFFIX,bbc.co.uk,CYLINK
+- DOMAIN-SUFFIX,bbc.com,CYLINK
+- DOMAIN-SUFFIX,bbci.co,CYLINK
+- DOMAIN-SUFFIX,bbci.co.uk,CYLINK
+
+# > CHOCO TV
+- DOMAIN-SUFFIX,chocotv.com.tw,CYLINK
+
+# > Epicgames
+- DOMAIN-KEYWORD,epicgames,CYLINK
+- DOMAIN-SUFFIX,helpshift.com,CYLINK
+
+# > Fox+
+- DOMAIN-KEYWORD,foxplus,CYLINK
+- DOMAIN-SUFFIX,config.fox.com,CYLINK
+- DOMAIN-SUFFIX,emome.net,CYLINK
+- DOMAIN-SUFFIX,fox.com,CYLINK
+- DOMAIN-SUFFIX,foxdcg.com,CYLINK
+- DOMAIN-SUFFIX,foxnow.com,CYLINK
+- DOMAIN-SUFFIX,foxplus.com,CYLINK
+- DOMAIN-SUFFIX,foxplay.com,CYLINK
+- DOMAIN-SUFFIX,ipinfo.io,CYLINK
+- DOMAIN-SUFFIX,mstage.io,CYLINK
+- DOMAIN-SUFFIX,now.com,CYLINK
+- DOMAIN-SUFFIX,theplatform.com,CYLINK
+- DOMAIN-SUFFIX,urlload.net,CYLINK
+
+# > HBO && HBO Go
+- DOMAIN-SUFFIX,execute-api.ap-southeast-1.amazonaws.com,CYLINK
+- DOMAIN-SUFFIX,hbo.com,CYLINK
+- DOMAIN-SUFFIX,hboasia.com,CYLINK
+- DOMAIN-SUFFIX,hbogo.com,CYLINK
+- DOMAIN-SUFFIX,hbogoasia.hk,CYLINK
+
+# > Hulu
+- DOMAIN-SUFFIX,happyon.jp,CYLINK
+- DOMAIN-SUFFIX,hulu.com,CYLINK
+- DOMAIN-SUFFIX,huluim.com,CYLINK
+- DOMAIN-SUFFIX,hulustream.com,CYLINK
+
+# > Imkan
+- DOMAIN-SUFFIX,imkan.tv,CYLINK
+
+# > JOOX
+- DOMAIN-SUFFIX,joox.com,CYLINK
+
+# > MytvSUPER
+- DOMAIN-KEYWORD,nowtv100,CYLINK
+- DOMAIN-KEYWORD,rthklive,CYLINK
+- DOMAIN-SUFFIX,mytvsuper.com,CYLINK
+- DOMAIN-SUFFIX,tvb.com,CYLINK
+
+# > Netflix
+- DOMAIN-SUFFIX,netflix.com,CYLINK
+- DOMAIN-SUFFIX,netflix.net,CYLINK
+- DOMAIN-SUFFIX,nflxext.com,CYLINK
+- DOMAIN-SUFFIX,nflximg.com,CYLINK
+- DOMAIN-SUFFIX,nflximg.net,CYLINK
+- DOMAIN-SUFFIX,nflxso.net,CYLINK
+- DOMAIN-SUFFIX,nflxvideo.net,CYLINK
+
+# > Pandora
+- DOMAIN-SUFFIX,pandora.com,CYLINK
+
+# > Sky GO
+- DOMAIN-SUFFIX,sky.com,CYLINK
+- DOMAIN-SUFFIX,skygo.co.nz,CYLINK
+
+# > Spotify
+- DOMAIN-KEYWORD,spotify,CYLINK
+- DOMAIN-SUFFIX,scdn.co,CYLINK
+- DOMAIN-SUFFIX,spoti.fi,CYLINK
+
+# > viuTV
+- DOMAIN-SUFFIX,viu.tv,CYLINK
+
+# > Youtube
+- DOMAIN-KEYWORD,youtube,CYLINK
+- DOMAIN-SUFFIX,googlevideo.com,CYLINK
+- DOMAIN-SUFFIX,gvt2.com,CYLINK
+- DOMAIN-SUFFIX,youtu.be,CYLINK
+
+# (Asian_TV)
+# > Bilibili
+- DOMAIN-KEYWORD,bilibili,Domestic
+- DOMAIN-SUFFIX,acg.tv,Domestic
+- DOMAIN-SUFFIX,acgvideo.com,Domestic
+- DOMAIN-SUFFIX,b23.tv,Domestic
+- DOMAIN-SUFFIX,biliapi.com,Domestic
+- DOMAIN-SUFFIX,biliapi.net,Domestic
+- DOMAIN-SUFFIX,bilibili.com,Domestic
+- DOMAIN-SUFFIX,biligame.com,Domestic
+- DOMAIN-SUFFIX,biligame.net,Domestic
+- DOMAIN-SUFFIX,hdslb.com,Domestic
+- DOMAIN-SUFFIX,im9.com,Domestic
+
+# > IQIYI
+- DOMAIN-KEYWORD,qiyi,Domestic
+- DOMAIN-SUFFIX,qy.net,Domestic
+
+# > letv
+- DOMAIN-SUFFIX,api.mob.app.letv.com,Domestic
+
+# > NeteaseMusic
+- DOMAIN-SUFFIX,163yun.com,Domestic
+- DOMAIN-SUFFIX,music.126.net,Domestic
+- DOMAIN-SUFFIX,music.163.com,Domestic
+
+# > Tencent Video
+- DOMAIN-SUFFIX,vv.video.qq.com,Domestic
+
+# China Area Network
+# > Alibaba
+- DOMAIN-SUFFIX,alibaba.com,Domestic
+- DOMAIN-SUFFIX,alicdn.com,Domestic
+- DOMAIN-SUFFIX,amap.com,Domestic
+- DOMAIN-SUFFIX,dingtalk.com,Domestic
+- DOMAIN-SUFFIX,taobao.com,Domestic
+- DOMAIN-SUFFIX,tmall.com,Domestic
+- DOMAIN-SUFFIX,ykimg.com,Domestic
+- DOMAIN-SUFFIX,youku.com,Domestic
+- DOMAIN-SUFFIX,xiami.com,Domestic
+- DOMAIN-SUFFIX,xiami.net,Domestic
+# > NetEase
+- DOMAIN-SUFFIX,163.com,Domestic
+- DOMAIN-SUFFIX,126.net,Domestic
+- DOMAIN-SUFFIX,163yun.com,Domestic
+# > Sohu
+- DOMAIN-SUFFIX,sohu.com.cn,Domestic
+- DOMAIN-SUFFIX,itc.cn,Domestic
+- DOMAIN-SUFFIX,sohu.com,Domestic
+- DOMAIN-SUFFIX,v-56.com,Domestic
+# > Sina
+- DOMAIN-SUFFIX,weibo.com,Domestic
+- DOMAIN-SUFFIX,weibo.cn,Domestic
+# > JD
+- DOMAIN-SUFFIX,jd.com,Domestic
+- DOMAIN-SUFFIX,jd.hk,Domestic
+- DOMAIN-SUFFIX,360buyimg.com,Domestic
+# > MI
+- DOMAIN-SUFFIX,duokan.com,Domestic
+- DOMAIN-SUFFIX,mi-img.com,Domestic
+- DOMAIN-SUFFIX,mifile.cn,Domestic
+- DOMAIN-SUFFIX,xiaomi.com,Domestic
+# > bilibili
+- DOMAIN-SUFFIX,acgvideo.com,Domestic
+- DOMAIN-SUFFIX,bilibili.com,Domestic
+- DOMAIN-SUFFIX,hdslb.com,Domestic
+# > iQiyi
+- DOMAIN-SUFFIX,iqiyi.com,Domestic
+- DOMAIN-SUFFIX,iqiyipic.com,Domestic
+- DOMAIN-SUFFIX,71.am.com,Domestic
+# > HunanTV
+- DOMAIN-SUFFIX,hitv.com,Domestic
+- DOMAIN-SUFFIX,mgtv.com,Domestic
+# > Meitu
+- DOMAIN-SUFFIX,meitu.com,Domestic
+- DOMAIN-SUFFIX,meitudata.com,Domestic
+- DOMAIN-SUFFIX,meipai.com,Domestic
+# > YYeTs
+- DOMAIN-SUFFIX,zmzapi.com,Domestic
+- DOMAIN-SUFFIX,zimuzu.tv,Domestic
+- DOMAIN-SUFFIX,zmzfile.com,Domestic
+- DOMAIN-SUFFIX,zmzapi.net,Domestic
+# > 蛋蛋赞
+- DOMAIN-SUFFIX,baduziyuan.com,Domestic
+- DOMAIN-SUFFIX,com-hs-hkdy.com,Domestic
+- DOMAIN-SUFFIX,czybjz.com,Domestic
+- DOMAIN-SUFFIX,dandanzan.com,Domestic
+- DOMAIN-SUFFIX,fjhps.com,Domestic
+- DOMAIN-SUFFIX,kuyunbo.club,Domestic
+# > Baidu
+- DOMAIN-SUFFIX,baidu.com,Domestic
+- DOMAIN-SUFFIX,baidubcr.com,Domestic
+- DOMAIN-SUFFIX,bdstatic.com,Domestic
+# > ChinaNet
+- DOMAIN-SUFFIX,189.cn,Domestic
+- DOMAIN-SUFFIX,21cn.com,Domestic
+# > ByteDance
+- DOMAIN-SUFFIX,bytecdn.cn,Domestic
+- DOMAIN-SUFFIX,pstatp.com,Domestic
+- DOMAIN-SUFFIX,snssdk.com,Domestic
+- DOMAIN-SUFFIX,toutiao.com,Domestic
+# > Content Delivery Network
+# > Akamai
+- DOMAIN-SUFFIX,akadns.net,Domestic
+# - DOMAIN-SUFFIX,akamai.net,Domestic
+# - DOMAIN-SUFFIX,akamaiedge.net,Domestic
+# - DOMAIN-SUFFIX,akamaihd.net,Domestic
+# - DOMAIN-SUFFIX,akamaistream.net,Domestic
+# - DOMAIN-SUFFIX,akamaized.net,Domestic
+# > ChinaNetCenter
+- DOMAIN-SUFFIX,chinanetcenter.com,Domestic
+- DOMAIN-SUFFIX,wangsu.com,Domestic
+# > IP Query
+- DOMAIN-SUFFIX,ipip.net,Domestic
+- DOMAIN-SUFFIX,ip.cn,Domestic
+- DOMAIN-SUFFIX,ip.la,Domestic
+- DOMAIN-SUFFIX,ip-cdn.com,Domestic
+- DOMAIN-SUFFIX,ipv6-test.com,Domestic
+- DOMAIN-SUFFIX,test-ipv6.com,Domestic
+- DOMAIN-SUFFIX,whatismyip.com,Domestic
+- DOMAIN,ip.bjango.com,Domestic
+# > Other
+- DOMAIN-SUFFIX,40017.cn,Domestic
+- DOMAIN-SUFFIX,broadcasthe.net,Domestic
+- DOMAIN-SUFFIX,cailianpress.com,Domestic
+- DOMAIN-SUFFIX,chdbits.co,Domestic
+- DOMAIN-SUFFIX,chushou.tv,Domestic
+- DOMAIN-SUFFIX,cmbchina.com,Domestic
+- DOMAIN-SUFFIX,cmbimg.com,Domestic
+- DOMAIN-SUFFIX,cmct.tv,Domestic
+- DOMAIN-SUFFIX,cmvideo.cn,Domestic
+- DOMAIN-SUFFIX,cnlang.org,Domestic
+- DOMAIN-SUFFIX,doubanio.com,Domestic
+- DOMAIN-SUFFIX,douyu.com,Domestic
+- DOMAIN-SUFFIX,douyucdn.cn,Domestic
+- DOMAIN-SUFFIX,dxycdn.com,Domestic
+- DOMAIN-SUFFIX,hicloud.com,Domestic
+- DOMAIN-SUFFIX,hdchina.org,Domestic
+- DOMAIN-SUFFIX,hdcmct.org,Domestic
+- DOMAIN-SUFFIX,ithome.com,Domestic
+- DOMAIN-SUFFIX,kkmh.com,Domestic
+- DOMAIN-SUFFIX,ksosoft.com,Domestic
+- DOMAIN-SUFFIX,maoyun.tv,Domestic
+- DOMAIN-SUFFIX,meituan.net,Domestic
+- DOMAIN-SUFFIX,mobike.com,Domestic
+- DOMAIN-SUFFIX,mubu.com,Domestic
+- DOMAIN-SUFFIX,myzaker.com,Domestic
+- DOMAIN-SUFFIX,ourbits.club,Domestic
+- DOMAIN-SUFFIX,passthepopcorn.me,Domestic
+- DOMAIN-SUFFIX,paypal.com,Domestic
+- DOMAIN-SUFFIX,paypalobjects.com,Domestic
+- DOMAIN-SUFFIX,privatehd.to,Domestic
+- DOMAIN-SUFFIX,redacted.ch,Domestic
+- DOMAIN-SUFFIX,ruguoapp.com,Domestic
+- DOMAIN-SUFFIX,smzdm.com,Domestic
+- DOMAIN-SUFFIX,sogou.com,Domestic
+- DOMAIN-SUFFIX,teamviewer.com,Domestic
+- DOMAIN-SUFFIX,totheglory.im,Domestic
+- DOMAIN-SUFFIX,udacity.com,Domestic
+- DOMAIN-SUFFIX,xmcdn.com,Domestic
+- DOMAIN-SUFFIX,yangkeduo.com,Domestic
+- DOMAIN-SUFFIX,zhihu.com,Domestic
+- DOMAIN-SUFFIX,zhimg.com,Domestic
+#USER-AGENT,NeteaseMusic*,Domestic
+#USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*,Domestic
+
+# (DNS Cache Pollution Protection)
+# > Google
+- DOMAIN-SUFFIX,appspot.com,CYLINK
+- DOMAIN-SUFFIX,blogger.com,CYLINK
+- DOMAIN-SUFFIX,getoutline.org,CYLINK
+- DOMAIN-SUFFIX,gvt0.com,CYLINK
+- DOMAIN-SUFFIX,gvt1.com,CYLINK
+- DOMAIN-SUFFIX,gvt3.com,CYLINK
+- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,CYLINK
+- DOMAIN-KEYWORD,google,CYLINK
+- DOMAIN-KEYWORD,blogspot,CYLINK
+# > Facebook
+- DOMAIN-SUFFIX,cdninstagram.com,CYLINK
+- DOMAIN-SUFFIX,fb.com,CYLINK
+- DOMAIN-SUFFIX,fb.me,CYLINK
+- DOMAIN-SUFFIX,fbaddins.com,CYLINK
+- DOMAIN-SUFFIX,fbcdn.net,CYLINK
+- DOMAIN-SUFFIX,fbsbx.com,CYLINK
+- DOMAIN-SUFFIX,fbworkmail.com,CYLINK
+- DOMAIN-SUFFIX,instagram.com,CYLINK
+- DOMAIN-SUFFIX,m.me,CYLINK
+- DOMAIN-SUFFIX,messenger.com,CYLINK
+- DOMAIN-SUFFIX,oculus.com,CYLINK
+- DOMAIN-SUFFIX,oculuscdn.com,CYLINK
+- DOMAIN-SUFFIX,rocksdb.org,CYLINK
+- DOMAIN-SUFFIX,whatsapp.com,CYLINK
+- DOMAIN-SUFFIX,whatsapp.net,CYLINK
+- DOMAIN-KEYWORD,facebook,CYLINK
+# > Twitter
+- DOMAIN-SUFFIX,pscp.tv,CYLINK
+- DOMAIN-SUFFIX,periscope.tv,CYLINK
+- DOMAIN-SUFFIX,t.co,CYLINK
+- DOMAIN-SUFFIX,twimg.co,CYLINK
+- DOMAIN-SUFFIX,twimg.com,CYLINK
+- DOMAIN-SUFFIX,twitpic.com,CYLINK
+- DOMAIN-SUFFIX,vine.co,CYLINK
+- DOMAIN-KEYWORD,twitter,CYLINK
+# > Telegram
+- DOMAIN-SUFFIX,t.me,CYLINK
+- DOMAIN-SUFFIX,tdesktop.com,CYLINK
+- DOMAIN-SUFFIX,telegra.ph,CYLINK
+- DOMAIN-SUFFIX,telegram.me,CYLINK
+- DOMAIN-SUFFIX,telegram.org,CYLINK
+# > Line
+- DOMAIN-SUFFIX,line.me,CYLINK
+- DOMAIN-SUFFIX,line-apps.com,CYLINK
+- DOMAIN-SUFFIX,line-scdn.net,CYLINK
+- DOMAIN-SUFFIX,naver.jp,CYLINK
+# > Other
+- DOMAIN-SUFFIX,4shared.com,CYLINK
+- DOMAIN-SUFFIX,881903.com,CYLINK
+- DOMAIN-SUFFIX,abc.net.au,CYLINK
+- DOMAIN-SUFFIX,abebooks.com,CYLINK
+- DOMAIN-SUFFIX,amazon.co.jp,CYLINK
+- DOMAIN-SUFFIX,apigee.com,CYLINK
+- DOMAIN-SUFFIX,apk-dl.com,CYLINK
+- DOMAIN-SUFFIX,apkmirror.com,CYLINK
+- DOMAIN-SUFFIX,apkmonk.com,CYLINK
+- DOMAIN-SUFFIX,apkpure.com,CYLINK
+- DOMAIN-SUFFIX,aptoide.com,CYLINK
+- DOMAIN-SUFFIX,archive.is,CYLINK
+- DOMAIN-SUFFIX,archive.org,CYLINK
+- DOMAIN-SUFFIX,arte.tv,CYLINK
+- DOMAIN-SUFFIX,ask.com,CYLINK
+- DOMAIN-SUFFIX,avgle.com,CYLINK
+- DOMAIN-SUFFIX,badoo.com,CYLINK
+- DOMAIN-SUFFIX,bandwagonhost.com,CYLINK
+- DOMAIN-SUFFIX,bbc.com,CYLINK
+- DOMAIN-SUFFIX,behance.net,CYLINK
+- DOMAIN-SUFFIX,bibox.com,CYLINK
+- DOMAIN-SUFFIX,biggo.com.tw,CYLINK
+- DOMAIN-SUFFIX,binance.com,CYLINK
+- DOMAIN-SUFFIX,bitcointalk.org,CYLINK
+- DOMAIN-SUFFIX,bitfinex.com,CYLINK
+- DOMAIN-SUFFIX,bitmex.com,CYLINK
+- DOMAIN-SUFFIX,bit-z.com,CYLINK
+- DOMAIN-SUFFIX,bloglovin.com,CYLINK
+- DOMAIN-SUFFIX,bloomberg.cn,CYLINK
+- DOMAIN-SUFFIX,bloomberg.com,CYLINK
+- DOMAIN-SUFFIX,book.com.tw,CYLINK
+- DOMAIN-SUFFIX,booklive.jp,CYLINK
+- DOMAIN-SUFFIX,books.com.tw,CYLINK
+- DOMAIN-SUFFIX,box.com,CYLINK
+- DOMAIN-SUFFIX,brookings.edu,CYLINK
+- DOMAIN-SUFFIX,businessinsider.com,CYLINK
+- DOMAIN-SUFFIX,bwh1.net,CYLINK
+- DOMAIN-SUFFIX,castbox.fm,CYLINK
+- DOMAIN-SUFFIX,cbc.ca,CYLINK
+- DOMAIN-SUFFIX,cdw.com,CYLINK
+- DOMAIN-SUFFIX,change.org,CYLINK
+- DOMAIN-SUFFIX,ck101.com,CYLINK
+- DOMAIN-SUFFIX,clarionproject.org,CYLINK
+- DOMAIN-SUFFIX,clyp.it,CYLINK
+- DOMAIN-SUFFIX,cna.com.tw,CYLINK
+- DOMAIN-SUFFIX,comparitech.com,CYLINK
+- DOMAIN-SUFFIX,conoha.jp,CYLINK
+- DOMAIN-SUFFIX,crucial.com,CYLINK
+- DOMAIN-SUFFIX,cts.com.tw,CYLINK
+- DOMAIN-SUFFIX,cw.com.tw,CYLINK
+- DOMAIN-SUFFIX,cyberctm.com,CYLINK
+- DOMAIN-SUFFIX,dailymotion.com,CYLINK
+- DOMAIN-SUFFIX,dailyview.tw,CYLINK
+- DOMAIN-SUFFIX,daum.net,CYLINK
+- DOMAIN-SUFFIX,daumcdn.net,CYLINK
+- DOMAIN-SUFFIX,dcard.tw,CYLINK
+- DOMAIN-SUFFIX,deepdiscount.com,CYLINK
+- DOMAIN-SUFFIX,deezer.com,CYLINK
+- DOMAIN-SUFFIX,depositphotos.com,CYLINK
+- DOMAIN-SUFFIX,disconnect.me,CYLINK
+- DOMAIN-SUFFIX,discordapp.com,CYLINK
+- DOMAIN-SUFFIX,discordapp.net,CYLINK
+- DOMAIN-SUFFIX,disqus.com,CYLINK
+- DOMAIN-SUFFIX,dns2go.com,CYLINK
+- DOMAIN-SUFFIX,dropbox.com,CYLINK
+- DOMAIN-SUFFIX,dropboxusercontent.com,CYLINK
+- DOMAIN-SUFFIX,duckduckgo.com,CYLINK
+- DOMAIN-SUFFIX,dw.com,CYLINK
+- DOMAIN-SUFFIX,dynu.com,CYLINK
+- DOMAIN-SUFFIX,earthcam.com,CYLINK
+- DOMAIN-SUFFIX,ebookservice.tw,CYLINK
+- DOMAIN-SUFFIX,economist.com,CYLINK
+- DOMAIN-SUFFIX,edgecastcdn.net,CYLINK
+- DOMAIN-SUFFIX,edu,CYLINK
+- DOMAIN-SUFFIX,elpais.com,CYLINK
+- DOMAIN-SUFFIX,enanyang.my,CYLINK
+- DOMAIN-SUFFIX,euronews.com,CYLINK
+- DOMAIN-SUFFIX,feedly.com,CYLINK
+- DOMAIN-SUFFIX,files.wordpress.com,CYLINK
+- DOMAIN-SUFFIX,flickr.com,CYLINK
+- DOMAIN-SUFFIX,flitto.com,CYLINK
+- DOMAIN-SUFFIX,foreignpolicy.com,CYLINK
+- DOMAIN-SUFFIX,friday.tw,CYLINK
+- DOMAIN-SUFFIX,gate.io,CYLINK
+- DOMAIN-SUFFIX,getlantern.org,CYLINK
+- DOMAIN-SUFFIX,getsync.com,CYLINK
+- DOMAIN-SUFFIX,CYLINKvoices.org,CYLINK
+- DOMAIN-SUFFIX,goo.ne.jp,CYLINK
+- DOMAIN-SUFFIX,goodreads.com,CYLINK
+- DOMAIN-SUFFIX,gov.tw,CYLINK
+- DOMAIN-SUFFIX,gumroad.com,CYLINK
+- DOMAIN-SUFFIX,hbg.com,CYLINK
+- DOMAIN-SUFFIX,hightail.com,CYLINK
+- DOMAIN-SUFFIX,hk01.com,CYLINK
+- DOMAIN-SUFFIX,hkbf.org,CYLINK
+- DOMAIN-SUFFIX,hkbookcity.com,CYLINK
+- DOMAIN-SUFFIX,hkej.com,CYLINK
+- DOMAIN-SUFFIX,hket.com,CYLINK
+- DOMAIN-SUFFIX,hkgolden.com,CYLINK
+- DOMAIN-SUFFIX,hootsuite.com,CYLINK
+- DOMAIN-SUFFIX,hudson.org,CYLINK
+- DOMAIN-SUFFIX,huobi.pro,CYLINK
+- DOMAIN-SUFFIX,initiummall.com,CYLINK
+- DOMAIN-SUFFIX,ipfs.io,CYLINK
+- DOMAIN-SUFFIX,issuu.com,CYLINK
+- DOMAIN-SUFFIX,japantimes.co.jp,CYLINK
+- DOMAIN-SUFFIX,jiji.com,CYLINK
+- DOMAIN-SUFFIX,jinx.com,CYLINK
+- DOMAIN-SUFFIX,jkforum.net,CYLINK
+- DOMAIN-SUFFIX,joinmastodon.org,CYLINK
+- DOMAIN-SUFFIX,kakao.com,CYLINK
+- DOMAIN-SUFFIX,lihkg.com,CYLINK
+- DOMAIN-SUFFIX,live.com,CYLINK
+- DOMAIN-SUFFIX,mail.ru,CYLINK
+- DOMAIN-SUFFIX,matters.news,CYLINK
+- DOMAIN-SUFFIX,medium.com,CYLINK
+- DOMAIN-SUFFIX,mega.nz,CYLINK
+- DOMAIN-SUFFIX,mil,CYLINK
+- DOMAIN-SUFFIX,mobile01.com,CYLINK
+- DOMAIN-SUFFIX,naver.com,CYLINK
+- DOMAIN-SUFFIX,nikkei.com,CYLINK
+- DOMAIN-SUFFIX,nofile.io,CYLINK
+- DOMAIN-SUFFIX,now.com,CYLINK
+- DOMAIN-SUFFIX,nyt.com,CYLINK
+- DOMAIN-SUFFIX,nytchina.com,CYLINK
+- DOMAIN-SUFFIX,nytcn.me,CYLINK
+- DOMAIN-SUFFIX,nytco.com,CYLINK
+- DOMAIN-SUFFIX,nytimes.com,CYLINK
+- DOMAIN-SUFFIX,nytimg.com,CYLINK
+- DOMAIN-SUFFIX,nytlog.com,CYLINK
+- DOMAIN-SUFFIX,nytstyle.com,CYLINK
+- DOMAIN-SUFFIX,ok.ru,CYLINK
+- DOMAIN-SUFFIX,okex.com,CYLINK
+- DOMAIN-SUFFIX,pcloud.com,CYLINK
+- DOMAIN-SUFFIX,pinimg.com,CYLINK
+- DOMAIN-SUFFIX,pixiv.net,CYLINK
+- DOMAIN-SUFFIX,pornhub.com,CYLINK
+- DOMAIN-SUFFIX,pureapk.com,CYLINK
+- DOMAIN-SUFFIX,quora.com,CYLINK
+- DOMAIN-SUFFIX,quoracdn.net,CYLINK
+- DOMAIN-SUFFIX,rakuten.co.jp,CYLINK
+- DOMAIN-SUFFIX,reddit.com,CYLINK
+- DOMAIN-SUFFIX,redditmedia.com,CYLINK
+- DOMAIN-SUFFIX,resilio.com,CYLINK
+- DOMAIN-SUFFIX,reuters.com,CYLINK
+- DOMAIN-SUFFIX,scmp.com,CYLINK
+- DOMAIN-SUFFIX,scribd.com,CYLINK
+- DOMAIN-SUFFIX,seatguru.com,CYLINK
+- DOMAIN-SUFFIX,shadowsocks.org,CYLINK
+- DOMAIN-SUFFIX,slideshare.net,CYLINK
+- DOMAIN-SUFFIX,soundcloud.com,CYLINK
+- DOMAIN-SUFFIX,startpage.com,CYLINK
+- DOMAIN-SUFFIX,steamcommunity.com,CYLINK
+- DOMAIN-SUFFIX,steemit.com,CYLINK
+- DOMAIN-SUFFIX,t66y.com,CYLINK
+- DOMAIN-SUFFIX,teco-hk.org,CYLINK
+- DOMAIN-SUFFIX,teco-mo.org,CYLINK
+- DOMAIN-SUFFIX,teddysun.com,CYLINK
+- DOMAIN-SUFFIX,theinitium.com,CYLINK
+- DOMAIN-SUFFIX,tineye.com,CYLINK
+- DOMAIN-SUFFIX,torproject.org,CYLINK
+- DOMAIN-SUFFIX,tumblr.com,CYLINK
+- DOMAIN-SUFFIX,turbobit.net,CYLINK
+- DOMAIN-SUFFIX,twitch.tv,CYLINK
+- DOMAIN-SUFFIX,udn.com,CYLINK
+- DOMAIN-SUFFIX,unseen.is,CYLINK
+- DOMAIN-SUFFIX,upmedia.mg,CYLINK
+- DOMAIN-SUFFIX,uptodown.com,CYLINK
+- DOMAIN-SUFFIX,ustream.tv,CYLINK
+- DOMAIN-SUFFIX,uwants.com,CYLINK
+- DOMAIN-SUFFIX,v2ray.com,CYLINK
+- DOMAIN-SUFFIX,viber.com,CYLINK
+- DOMAIN-SUFFIX,videopress.com,CYLINK
+- DOMAIN-SUFFIX,vimeo.com,CYLINK
+- DOMAIN-SUFFIX,voxer.com,CYLINK
+- DOMAIN-SUFFIX,vzw.com,CYLINK
+- DOMAIN-SUFFIX,w3schools.com,CYLINK
+- DOMAIN-SUFFIX,wattpad.com,CYLINK
+- DOMAIN-SUFFIX,whoer.net,CYLINK
+- DOMAIN-SUFFIX,wikimapia.org,CYLINK
+- DOMAIN-SUFFIX,wikipedia.org,CYLINK
+- DOMAIN-SUFFIX,wire.com,CYLINK
+- DOMAIN-SUFFIX,worldcat.org,CYLINK
+- DOMAIN-SUFFIX,wsj.com,CYLINK
+- DOMAIN-SUFFIX,wsj.net,CYLINK
+- DOMAIN-SUFFIX,xboxlive.com,CYLINK
+- DOMAIN-SUFFIX,xvideos.com,CYLINK
+- DOMAIN-SUFFIX,yahoo.com,CYLINK
+- DOMAIN-SUFFIX,yesasia.com,CYLINK
+- DOMAIN-SUFFIX,yes-news.com,CYLINK
+- DOMAIN-SUFFIX,yomiuri.co.jp,CYLINK
+- DOMAIN-SUFFIX,you-get.org,CYLINK
+- DOMAIN-SUFFIX,zb.com,CYLINK
+- DOMAIN-SUFFIX,zello.com,CYLINK
+- DOMAIN-SUFFIX,zeronet.io,CYLINK
+- DOMAIN,cdn-images.mailchimp.com,CYLINK
+- DOMAIN,id.heroku.com,CYLINK
+- DOMAIN-KEYWORD,github,CYLINK
+- DOMAIN-KEYWORD,jav,CYLINK
+- DOMAIN-KEYWORD,pinterest,CYLINK
+- DOMAIN-KEYWORD,porn,CYLINK
+- DOMAIN-KEYWORD,wikileaks,CYLINK
+
+# (Region-Restricted Access Denied)
+- DOMAIN-SUFFIX,apartmentratings.com,CYLINK
+- DOMAIN-SUFFIX,apartments.com,CYLINK
+- DOMAIN-SUFFIX,bankmobilevibe.com,CYLINK
+- DOMAIN-SUFFIX,bing.com,CYLINK
+- DOMAIN-SUFFIX,booktopia.com.au,CYLINK
+- DOMAIN-SUFFIX,centauro.com.br,CYLINK
+- DOMAIN-SUFFIX,clearsurance.com,CYLINK
+- DOMAIN-SUFFIX,costco.com,CYLINK
+- DOMAIN-SUFFIX,crackle.com,CYLINK
+- DOMAIN-SUFFIX,depositphotos.cn,CYLINK
+- DOMAIN-SUFFIX,dish.com,CYLINK
+- DOMAIN-SUFFIX,dmm.co.jp,CYLINK
+- DOMAIN-SUFFIX,dmm.com,CYLINK
+- DOMAIN-SUFFIX,dnvod.tv,CYLINK
+- DOMAIN-SUFFIX,esurance.com,CYLINK
+- DOMAIN-SUFFIX,extmatrix.com,CYLINK
+- DOMAIN-SUFFIX,fastpic.ru,CYLINK
+- DOMAIN-SUFFIX,flipboard.com,CYLINK
+- DOMAIN-SUFFIX,fnac.be,CYLINK
+- DOMAIN-SUFFIX,fnac.com,CYLINK
+- DOMAIN-SUFFIX,funkyimg.com,CYLINK
+- DOMAIN-SUFFIX,fxnetworks.com,CYLINK
+- DOMAIN-SUFFIX,gettyimages.com,CYLINK
+- DOMAIN-SUFFIX,jcpenney.com,CYLINK
+- DOMAIN-SUFFIX,kknews.cc,CYLINK
+- DOMAIN-SUFFIX,nationwide.com,CYLINK
+- DOMAIN-SUFFIX,nbc.com,CYLINK
+- DOMAIN-SUFFIX,nordstrom.com,CYLINK
+- DOMAIN-SUFFIX,nordstromimage.com,CYLINK
+- DOMAIN-SUFFIX,nordstromrack.com,CYLINK
+- DOMAIN-SUFFIX,read01.com,CYLINK
+- DOMAIN-SUFFIX,superpages.com,CYLINK
+- DOMAIN-SUFFIX,target.com,CYLINK
+- DOMAIN-SUFFIX,thinkgeek.com,CYLINK
+- DOMAIN-SUFFIX,tracfone.com,CYLINK
+- DOMAIN-SUFFIX,uploader.jp,CYLINK
+- DOMAIN-SUFFIX,vevo.com,CYLINK
+- DOMAIN-SUFFIX,viu.tv,CYLINK
+- DOMAIN-SUFFIX,vk.com,CYLINK
+- DOMAIN-SUFFIX,vsco.co,CYLINK
+- DOMAIN-SUFFIX,xfinity.com,CYLINK
+- DOMAIN-SUFFIX,zattoo.com,CYLINK
+- DOMAIN,abc.com,CYLINK
+- DOMAIN,abc.go.com,CYLINK
+- DOMAIN,abc.net.au,CYLINK
+- DOMAIN,wego.here.com,CYLINK
+#USER-AGENT,Roam*,CYLINK
+
+# (The Most Popular Sites)
+# > Apple
+# > Apple URL Shortener
+- DOMAIN-SUFFIX,appsto.re,CYLINK
+# > TestFlight
+- DOMAIN,beta.itunes.apple.com,CYLINK
+# > iBooks Store download
+- DOMAIN,books.itunes.apple.com,CYLINK
+# > iTunes Store Moveis Trailers
+- DOMAIN,hls.itunes.apple.com,CYLINK
+# App Store Preview
+- DOMAIN,itunes.apple.com,CYLINK
+# > Spotlight
+- DOMAIN,api-glb-sea.smoot.apple.com,CYLINK
+# > Dictionary
+- DOMAIN,lookup-api.apple.com,CYLINK
+#PROCESS-NAME,LookupViewService,CYLINK
+# > Google
+- DOMAIN-SUFFIX,abc.xyz,CYLINK
+- DOMAIN-SUFFIX,android.com,CYLINK
+- DOMAIN-SUFFIX,androidify.com,CYLINK
+- DOMAIN-SUFFIX,dialogflow.com,CYLINK
+- DOMAIN-SUFFIX,autodraw.com,CYLINK
+- DOMAIN-SUFFIX,capitalg.com,CYLINK
+- DOMAIN-SUFFIX,certificate-transparency.org,CYLINK
+- DOMAIN-SUFFIX,chrome.com,CYLINK
+- DOMAIN-SUFFIX,chromeexperiments.com,CYLINK
+- DOMAIN-SUFFIX,chromestatus.com,CYLINK
+- DOMAIN-SUFFIX,chromium.org,CYLINK
+- DOMAIN-SUFFIX,creativelab5.com,CYLINK
+- DOMAIN-SUFFIX,debug.com,CYLINK
+- DOMAIN-SUFFIX,deepmind.com,CYLINK
+- DOMAIN-SUFFIX,firebaseio.com,CYLINK
+- DOMAIN-SUFFIX,getmdl.io,CYLINK
+- DOMAIN-SUFFIX,ggpht.com,CYLINK
+- DOMAIN-SUFFIX,gmail.com,CYLINK
+- DOMAIN-SUFFIX,gmodules.com,CYLINK
+- DOMAIN-SUFFIX,godoc.org,CYLINK
+- DOMAIN-SUFFIX,golang.org,CYLINK
+- DOMAIN-SUFFIX,gstatic.com,CYLINK
+- DOMAIN-SUFFIX,gv.com,CYLINK
+- DOMAIN-SUFFIX,gwtproject.org,CYLINK
+- DOMAIN-SUFFIX,itasoftware.com,CYLINK
+- DOMAIN-SUFFIX,madewithcode.com,CYLINK
+- DOMAIN-SUFFIX,material.io,CYLINK
+- DOMAIN-SUFFIX,polymer-project.org,CYLINK
+- DOMAIN-SUFFIX,admin.recaptcha.net,CYLINK
+- DOMAIN-SUFFIX,recaptcha.net,CYLINK
+- DOMAIN-SUFFIX,shattered.io,CYLINK
+- DOMAIN-SUFFIX,synergyse.com,CYLINK
+- DOMAIN-SUFFIX,tensorflow.org,CYLINK
+- DOMAIN-SUFFIX,tiltbrush.com,CYLINK
+- DOMAIN-SUFFIX,waveprotocol.org,CYLINK
+- DOMAIN-SUFFIX,waymo.com,CYLINK
+- DOMAIN-SUFFIX,webmproject.org,CYLINK
+- DOMAIN-SUFFIX,webrtc.org,CYLINK
+- DOMAIN-SUFFIX,whatbrowser.org,CYLINK
+- DOMAIN-SUFFIX,widevine.com,CYLINK
+- DOMAIN-SUFFIX,x.company,CYLINK
+- DOMAIN-SUFFIX,youtu.be,CYLINK
+- DOMAIN-SUFFIX,yt.be,CYLINK
+- DOMAIN-SUFFIX,ytimg.com,CYLINK
+# > Steam
+- DOMAIN,media.steampowered.com,CYLINK
+- DOMAIN,store.steampowered.com,CYLINK
+# > Other
+- DOMAIN-SUFFIX,0rz.tw,CYLINK
+- DOMAIN-SUFFIX,4bluestones.biz,CYLINK
+- DOMAIN-SUFFIX,9bis.net,CYLINK
+- DOMAIN-SUFFIX,allconnected.co,CYLINK
+- DOMAIN-SUFFIX,amazonaws.com,CYLINK
+- DOMAIN-SUFFIX,aol.com,CYLINK
+- DOMAIN-SUFFIX,bcc.com.tw,CYLINK
+- DOMAIN-SUFFIX,bit.ly,CYLINK
+- DOMAIN-SUFFIX,bitshare.com,CYLINK
+- DOMAIN-SUFFIX,blog.jp,CYLINK
+- DOMAIN-SUFFIX,blogimg.jp,CYLINK
+- DOMAIN-SUFFIX,blogtd.org,CYLINK
+- DOMAIN-SUFFIX,broadcast.co.nz,CYLINK
+- DOMAIN-SUFFIX,camfrog.com,CYLINK
+- DOMAIN-SUFFIX,cfos.de,CYLINK
+- DOMAIN-SUFFIX,citypopulation.de,CYLINK
+- DOMAIN-SUFFIX,cloudfront.net,CYLINK
+- DOMAIN-SUFFIX,ctitv.com.tw,CYLINK
+- DOMAIN-SUFFIX,cuhk.edu.hk,CYLINK
+- DOMAIN-SUFFIX,cusu.hk,CYLINK
+- DOMAIN-SUFFIX,discuss.com.hk,CYLINK
+- DOMAIN-SUFFIX,dropboxapi.com,CYLINK
+- DOMAIN-SUFFIX,edditstatic.com,CYLINK
+- DOMAIN-SUFFIX,flickriver.com,CYLINK
+- DOMAIN-SUFFIX,focustaiwan.tw,CYLINK
+- DOMAIN-SUFFIX,free.fr,CYLINK
+- DOMAIN-SUFFIX,ftchinese.com,CYLINK
+- DOMAIN-SUFFIX,gigacircle.com,CYLINK
+- DOMAIN-SUFFIX,gov,CYLINK
+- DOMAIN-SUFFIX,hk-pub.com,CYLINK
+- DOMAIN-SUFFIX,hosting.co.uk,CYLINK
+- DOMAIN-SUFFIX,hwcdn.net,CYLINK
+- DOMAIN-SUFFIX,jtvnw.net,CYLINK
+- DOMAIN-SUFFIX,linksalpha.com,CYLINK
+- DOMAIN-SUFFIX,manyvids.com,CYLINK
+- DOMAIN-SUFFIX,myactimes.com,CYLINK
+- DOMAIN-SUFFIX,newsblur.com,CYLINK
+- DOMAIN-SUFFIX,now.im,CYLINK
+- DOMAIN-SUFFIX,redditlist.com,CYLINK
+- DOMAIN-SUFFIX,signal.org,CYLINK
+- DOMAIN-SUFFIX,sparknotes.com,CYLINK
+- DOMAIN-SUFFIX,streetvoice.com,CYLINK
+- DOMAIN-SUFFIX,ttvnw.net,CYLINK
+- DOMAIN-SUFFIX,tv.com,CYLINK
+- DOMAIN-SUFFIX,twitchcdn.net,CYLINK
+- DOMAIN-SUFFIX,typepad.com,CYLINK
+- DOMAIN-SUFFIX,udnbkk.com,CYLINK
+- DOMAIN-SUFFIX,whispersystems.org,CYLINK
+- DOMAIN-SUFFIX,wikia.com,CYLINK
+- DOMAIN-SUFFIX,wn.com,CYLINK
+- DOMAIN-SUFFIX,wolframalpha.com,CYLINK
+- DOMAIN-SUFFIX,x-art.com,CYLINK
+- DOMAIN-SUFFIX,yimg.com,CYLINK
+
+# Local Area Network
+- DOMAIN-KEYWORD,announce,DIRECT
+- DOMAIN-KEYWORD,torrent,DIRECT
+- DOMAIN-KEYWORD,tracker,DIRECT
+- DOMAIN-SUFFIX,smtp,DIRECT
+- DOMAIN-SUFFIX,local,DIRECT
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,100.64.0.0/10,DIRECT
+
+# > IQIYI
+- IP-CIDR,101.227.0.0/16,Domestic
+- IP-CIDR,101.224.0.0/13,Domestic
+- IP-CIDR,119.176.0.0/12,Domestic
+
+# > Youku
+- IP-CIDR,106.11.0.0/16,Domestic
+
+# > Telegram
+- IP-CIDR,67.198.55.0/24,CYLINK
+- IP-CIDR,91.108.4.0/22,CYLINK
+- IP-CIDR,91.108.8.0/22,CYLINK
+- IP-CIDR,91.108.12.0/22,CYLINK
+- IP-CIDR,91.108.16.0/22,CYLINK
+- IP-CIDR,91.108.56.0/22,CYLINK
+- IP-CIDR,109.239.140.0/24,CYLINK
+- IP-CIDR,149.154.160.0/20,CYLINK
+- IP-CIDR,205.172.60.0/22,CYLINK
+
+# (Extra IP-CIRD)
+# > Google
+- IP-CIDR,35.190.247.0/24,CYLINK
+- IP-CIDR,64.233.160.0/19,CYLINK
+- IP-CIDR,66.102.0.0/20,CYLINK
+- IP-CIDR,66.249.80.0/20,CYLINK
+- IP-CIDR,72.14.192.0/18,CYLINK
+- IP-CIDR,74.125.0.0/16,CYLINK
+- IP-CIDR,108.177.8.0/21,CYLINK
+- IP-CIDR,172.217.0.0/16,CYLINK
+- IP-CIDR,173.194.0.0/16,CYLINK
+- IP-CIDR,209.85.128.0/17,CYLINK
+- IP-CIDR,216.58.192.0/19,CYLINK
+- IP-CIDR,216.239.32.0/19,CYLINK
+# > Facebook
+- IP-CIDR,31.13.24.0/21,CYLINK
+- IP-CIDR,31.13.64.0/18,CYLINK
+- IP-CIDR,45.64.40.0/22,CYLINK
+- IP-CIDR,66.220.144.0/20,CYLINK
+- IP-CIDR,69.63.176.0/20,CYLINK
+- IP-CIDR,69.171.224.0/19,CYLINK
+- IP-CIDR,74.119.76.0/22,CYLINK
+- IP-CIDR,103.4.96.0/22,CYLINK
+- IP-CIDR,129.134.0.0/17,CYLINK
+- IP-CIDR,157.240.0.0/17,CYLINK
+- IP-CIDR,173.252.64.0/19,CYLINK
+- IP-CIDR,173.252.96.0/19,CYLINK
+- IP-CIDR,179.60.192.0/22,CYLINK
+- IP-CIDR,185.60.216.0/22,CYLINK
+- IP-CIDR,204.15.20.0/22,CYLINK
+# > Twitter
+- IP-CIDR,69.195.160.0/19,CYLINK
+- IP-CIDR,104.244.42.0/21,CYLINK
+- IP-CIDR,192.133.76.0/22,CYLINK
+- IP-CIDR,199.16.156.0/22,CYLINK
+- IP-CIDR,199.59.148.0/22,CYLINK
+- IP-CIDR,199.96.56.0/21,CYLINK
+- IP-CIDR,202.160.128.0/22,CYLINK
+- IP-CIDR,209.237.192.0/19,CYLINK
+
+# GeoIP China
+- GEOIP,CN,Domestic
+
+- MATCH,Others
